@@ -5,44 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taskflow AI</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 </head>
 <body>
+    <!-- Sidebar Navigation -->
     <nav class="sidebar">
+        <div class="logo-container">
+            <img src="./images/logo.png" alt="TaskFlow AI Logo" class="logo" style="border-radius: 35px;">
+        </div>
         <div class="nav-menu">
-            <a href=" " class="nav-item">HOME</a>
-            <a href="planner.html" class="nav-item">PLANNER</a>
-            <a href="settings.html" class="nav-item">SETTINGS</a>
-            <a href="teams.html" class="nav-item">TEAMS</a>
-            <a href="integrations.html" class="nav-item">INTEGRATION</a>
+            <a href=" " class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>HOME</span>
+            </a>
+            <a href="planner.html" class="nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>PLANNER</span>
+            </a>
+            <a href="settings.html" class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>SETTINGS</span>
+            </a>
+            <a href="teams.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>TEAMS</span>
+            </a>
+            <a href="integrations.html" class="nav-item">
+                <i class="fas fa-puzzle-piece"></i>
+                <span>INTEGRATION</span>
+            </a>
+        </div>
+        <div class="user-profile">
+            <img src="./images/avatar.png" alt="User Avatar" class="avatar">
+            <div class="user-info">
+                <h4>John Doe</h4>
+                <p>Project Manager</p>
+            </div>
         </div>
     </nav>
 
     <main class="main-content">
+        <!-- Header Section -->
+        <header class="dashboard-header">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search tasks, projects, or teams...">
+            </div>
+            <div class="header-actions">
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Welcome Container -->
         <div class="welcome-container">
-            <h1 class="welcome-title">Welcome Back!</h1>
+            <h1 class="welcome-title">Welcome Back, John! 👋</h1>
             <p class="welcome-text">
-                We're glad to see you again. Your workspace is ready for you to continue your journey. 
-                Explore our latest features and improvements designed to enhance your experience.
+                Ready to boost your productivity? Your workspace is prepared with today's priorities 
+                and team updates. Let's make progress on your goals!
             </p>
             <p class="welcome-text">
                 Get started by checking your planner or collaborating with your team members.
                 Need help? Our support team is always here to assist you.
             </p>
-            <a href="#" class="welcome-button">Get Started →</a>
-            
+            <div class="welcome-actions">
+                <a href="#" class="welcome-button">Get Started →</a>
+                <a href="#" class="welcome-button secondary">View Tutorial</a>
+            </div>
         </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <h3>Quick Actions</h3>
+            <div class="action-buttons">
+                <button class="action-btn">
+                    <i class="fas fa-comments"></i>
+                    Discussions
+                </button>
+                <button class="action-btn">
+                    <i class="fas fa-user-plus"></i>
+                    Add Team Member
+                </button>
+                <button class="action-btn">
+                    <i class="fas fa-file-export"></i>
+                    Export Report
+                </button>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
         <div class="statistics">
             <div class="time-spent">
-                <h4>Time spent on average</h4>
+                <h4>Time Spent on Average</h4>
+                <img src="./images/spent.png" alt="time spent">
+                <div class="stat-number">5.2h</div>
+                <p class="stat-description">Daily average time spent on tasks this week</p>
+                <div class="stat-trend positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>12% vs last week</span>
+                </div>
             </div>
             <div class="tasks-completed">
-                <h4>Number of tasks completed this week<h4>
+                <h4>Tasks Completed</h4>
+                <img src="./images/completed.png" alt="completed calendar">
+                <div class="stat-number">23</div>
+                <p class="stat-description">Tasks successfully completed this week</p>
+                <div class="stat-trend positive">
+                    <i class="fas fa-arrow-up"></i>
+                    <span>8% vs last week</span>
+                </div>
             </div>
             <div class="pending-works">
-                <h4>Pending works</h4>
+                <h4>Pending Tasks</h4>
+                <img src="./images/pending.png" alt="pending clock">
+                <div class="stat-number">7</div>
+                <p class="stat-description">Tasks requiring attention</p>
+                <div class="stat-trend negative">
+                    <i class="fas fa-arrow-down"></i>
+                    <span>5% vs last week</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="recent-activity">
+            <h3>Recent Activity</h3>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="activity-details">
+                        <h4>Website Redesign completed</h4>
+                        <p>Project milestone achieved</p>
+                        <span class="activity-time">2 hours ago</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="activity-details">
+                        <h4>New team member added</h4>
+                        <p>Sarah Johnson joined Design Team</p>
+                        <span class="activity-time">5 hours ago</span>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="activity-details">
+                        <h4>New comment on Project X</h4>
+                        <p>Client feedback received</p>
+                        <span class="activity-time">Yesterday</span>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 </body>
-
 </html>
