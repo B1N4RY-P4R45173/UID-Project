@@ -1,0 +1,150 @@
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+/*############################# Sidebar code###############################*/
+        body {
+            min-height: 100%;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 100%;
+            background-color: #1a1a2e;  /* Dark navy blue */
+            position: fixed;
+            /* left: 0;
+            top: 0; */
+        }
+
+        .nav-menu {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-item {
+            width: 100%;
+            padding: 1rem;
+            color: #e6e6e6;  /* Light gray for text */
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-align: center;
+            letter-spacing: 1px;
+            font-weight: bold;
+            transition: 0.3s ease;  /* Smooth transition for hover effect */
+        }
+
+        .nav-item:hover {
+            background-color: #16213e;  /* Slightly lighter navy for hover */
+            color: #00ff95;  /* Neon green */
+        }
+
+/*############################# Main-content code###############################*/
+
+        .main-content {
+            margin-left: 200px;
+            flex: 1;
+            background: linear-gradient(to right, #2c3e50, #3498db);  /* Dark blue to lighter blue gradient */
+            min-height: 100vh;
+            width: 100%;
+            padding: 40px;
+        }
+
+/*#############################Welcome code###############################*/        
+
+        .welcome-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-title {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .welcome-text {
+            color: #e6e6e6;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .welcome-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #00ff95;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .welcome-button:hover {
+            background-color: #00e085;
+            transform: translateY(-2px);
+        }
+
+/*############################# statistics code###############################*/
+        .statistics {
+            display: flex;
+            flex-direction: row;
+            margin-top: 60px;
+            justify-content: space-evenly;
+            row-gap: 20px;
+            flex-wrap: wrap;
+        }
+
+
+        .time-spent {
+            height: 400px;
+            width: 250px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.35);
+            border-radius: 50px;
+            
+        }
+        .time-spent > h4 {
+            padding-top: 50px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+
+        .tasks-completed {
+            height: 400px;
+            width: 250px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.35);
+            border-radius: 50px;
+        }
+
+        .tasks-completed > h4 {
+            padding-top: 50px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+
+        .pending-works {
+            height: 400px;
+            width: 250px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.35);
+            border-radius: 50px;
+        }
+
+        .pending-works > h4 {
+            padding-top: 50px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
