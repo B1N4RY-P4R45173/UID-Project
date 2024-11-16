@@ -47,128 +47,171 @@
 
     <main class="main-content">
         <!-- Header Section -->
-        <header class="dashboard-header">
-            <div class="search-bar">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search tasks, projects, or teams...">
-            </div>
-            <div class="header-actions">
-                <button class="notification-btn">
-                    <i class="fas fa-bell"></i>
-                    <span class="notification-badge">3</span>
-                </button>
-                <button class="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </header>
+         <div class="main-body" style="padding: 30px;">
+            <header class="dashboard-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search tasks, projects, or teams...">
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </header>
 
-        <!-- Welcome Container -->
-        <div class="welcome-container">
-            <h1 class="welcome-title">Welcome Back, John! 👋</h1>
-            <p class="welcome-text">
-                Ready to boost your productivity? Your workspace is prepared with today's priorities 
-                and team updates. Let's make progress on your goals!
-            </p>
-            <p class="welcome-text">
-                Get started by checking your planner or collaborating with your team members.
-                Need help? Our support team is always here to assist you.
-            </p>
-            <div class="welcome-actions">
-                <a href="#" class="welcome-button">Get Started →</a>
-                <a href="#" class="welcome-button secondary">View Tutorial</a>
+            <!-- Welcome Container -->
+            <div class="welcome-container">
+                <h1 class="welcome-title">Welcome Back, John! 👋</h1>
+                <p class="welcome-text">
+                    Ready to boost your productivity? Your workspace is prepared with today's priorities 
+                    and team updates. Let's make progress on your goals!
+                </p>
+                <p class="welcome-text">
+                    Get started by checking your planner or collaborating with your team members.
+                    Need help? Our support team is always here to assist you.
+                </p>
+                <div class="welcome-actions">
+                    <a href="#" class="welcome-button">Get Started →</a>
+                    <a href="#" class="welcome-button secondary">View Tutorial</a>
+                </div>
             </div>
-        </div>
 
-        <!-- Quick Actions -->
-        <div class="quick-actions">
-            <h3>Quick Actions</h3>
-            <div class="action-buttons">
-                <button class="action-btn">
-                    <i class="fas fa-comments"></i>
-                    Discussions
-                </button>
-                <button class="action-btn">
-                    <i class="fas fa-user-plus"></i>
-                    Add Team Member
-                </button>
-                <button class="action-btn">
-                    <i class="fas fa-file-export"></i>
-                    Export Report
-                </button>
-            </div>
-        </div>
-
-        <!-- Statistics Section -->
-        <div class="statistics">
-            <div class="time-spent">
-                <h4>Time Spent on Average</h4>
-                <img src="./images/spent.png" alt="time spent">
-                <div class="stat-number">5.2h</div>
-                <p class="stat-description">Daily average time spent on tasks this week</p>
-                <div class="stat-trend positive">
-                    <i class="fas fa-arrow-up"></i>
-                    <span>12% vs last week</span>
-                </div>
-            </div>
-            <div class="tasks-completed">
-                <h4>Tasks Completed</h4>
-                <img src="./images/completed.png" alt="completed calendar">
-                <div class="stat-number">23</div>
-                <p class="stat-description">Tasks successfully completed this week</p>
-                <div class="stat-trend positive">
-                    <i class="fas fa-arrow-up"></i>
-                    <span>8% vs last week</span>
-                </div>
-            </div>
-            <div class="pending-works">
-                <h4>Pending Tasks</h4>
-                <img src="./images/pending.png" alt="pending clock">
-                <div class="stat-number">7</div>
-                <p class="stat-description">Tasks requiring attention</p>
-                <div class="stat-trend negative">
-                    <i class="fas fa-arrow-down"></i>
-                    <span>5% vs last week</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Recent Activity -->
-        <div class="recent-activity">
-            <h3>Recent Activity</h3>
-            <div class="activity-list">
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <div class="activity-details">
-                        <h4>Website Redesign completed</h4>
-                        <p>Project milestone achieved</p>
-                        <span class="activity-time">2 hours ago</span>
-                    </div>
-                </div>
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="fas fa-user-plus"></i>
-                    </div>
-                    <div class="activity-details">
-                        <h4>New team member added</h4>
-                        <p>Sarah Johnson joined Design Team</p>
-                        <span class="activity-time">5 hours ago</span>
-                    </div>
-                </div>
-                <div class="activity-item">
-                    <div class="activity-icon">
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <h3>Quick Actions</h3>
+                <div class="action-buttons">
+                    <button class="action-btn">
                         <i class="fas fa-comments"></i>
+                        Discussions
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-user-plus"></i>
+                        Add Team Member
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-file-export"></i>
+                        Export Report
+                    </button>
+                </div>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="statistics">
+                <div class="time-spent">
+                    <h4>Time Spent on Average</h4>
+                    <img src="./images/spent.png" alt="time spent">
+                    <div class="stat-number">5.2h</div>
+                    <p class="stat-description">Daily average time spent on tasks this week</p>
+                    <div class="stat-trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>12% vs last week</span>
                     </div>
-                    <div class="activity-details">
-                        <h4>New comment on Project X</h4>
-                        <p>Client feedback received</p>
-                        <span class="activity-time">Yesterday</span>
+                </div>
+                <div class="tasks-completed">
+                    <h4>Tasks Completed</h4>
+                    <img src="./images/completed.png" alt="completed calendar">
+                    <div class="stat-number">23</div>
+                    <p class="stat-description">Tasks successfully completed this week</p>
+                    <div class="stat-trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>8% vs last week</span>
+                    </div>
+                </div>
+                <div class="pending-works">
+                    <h4>Pending Tasks</h4>
+                    <img src="./images/pending.png" alt="pending clock">
+                    <div class="stat-number">7</div>
+                    <p class="stat-description">Tasks requiring attention</p>
+                    <div class="stat-trend negative">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>5% vs last week</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>Website Redesign completed</h4>
+                            <p>Project milestone achieved</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>New team member added</h4>
+                            <p>Sarah Johnson joined Design Team</p>
+                            <span class="activity-time">5 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h4>New comment on Project X</h4>
+                            <p>Client feedback received</p>
+                            <span class="activity-time">Yesterday</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <nav class="footer-nav">
+                        <a href="about.html" class="footer-link">
+                            <i class="fas fa-info-circle"></i>
+                            About Us
+                        </a>
+                        <a href="contact.html" class="footer-link">
+                            <i class="fas fa-envelope"></i>
+                            Contact Us
+                        </a>
+                        <a href="gallery.html" class="footer-link">
+                            <i class="fas fa-images"></i>
+                            Gallery
+                        </a>
+                    </nav>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@taskflowai.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Business Street, Suite 100, City, ST 12345</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Stay Connected</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TaskFlow AI. All rights reserved.</p>
+            </div>
+        </footer>
     </main>
 </body>
 </html>
