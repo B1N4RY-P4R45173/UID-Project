@@ -11,8 +11,9 @@
             font-family: Arial, sans-serif;
         }
 
+/*############################# Sidebar code###############################*/
         body {
-            /* min-height: 100vh; */
+            min-height: 100%;
             display: flex;
         }
 
@@ -49,12 +50,110 @@
             color: #00ff95;  /* Neon green */
         }
 
+/*############################# Main-content code###############################*/
+
         .main-content {
             margin-left: 200px;
             flex: 1;
             background: linear-gradient(to right, #2c3e50, #3498db);  /* Dark blue to lighter blue gradient */
-            /* min-height: 100vh; */
+            min-height: 100vh;
             width: 100%;
+            padding: 40px;
+        }
+
+/*#############################Welcome code###############################*/        
+
+        .welcome-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-title {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .welcome-text {
+            color: #e6e6e6;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .welcome-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #00ff95;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .welcome-button:hover {
+            background-color: #00e085;
+            transform: translateY(-2px);
+        }
+
+/*############################# Statastics code###############################*/
+        .statastics {
+            display: flex;
+            flex-direction: row;
+            margin-top: 60px;
+            justify-content: space-evenly;
+            row-gap: 20px;
+            flex-wrap: wrap;
+        }
+
+
+        .time-spent {
+            height: 400px;
+            width: 250px;
+            text-align: center;
+            background-color: #ffffff95;
+            border-radius: 50px;
+            
+        }
+        .time-spent > h4 {
+            padding-top: 50px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+
+        .tasks-completed {
+            height: 400px;
+            width: 250px;
+            text-align: center;
+            background-color: #ffffff95;
+            border-radius: 50px;
+        }
+
+        .tasks-completed > h4 {
+            padding-top: 50px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+
+        .pending-works {
+            height: 400px;
+            width: 250px;
+            text-align: center;
+            background-color: #ffffff95;
+            border-radius: 50px;
+        }
+
+        .pending-works > h4 {
+            padding-top: 50px;
+            padding-left: 5px;
+            padding-right: 5px;
         }
     </style>
 </head>
@@ -70,6 +169,30 @@
     </nav>
 
     <main class="main-content">
+        <div class="welcome-container">
+            <h1 class="welcome-title">Welcome Back!</h1>
+            <p class="welcome-text">
+                We're glad to see you again. Your workspace is ready for you to continue your journey. 
+                Explore our latest features and improvements designed to enhance your experience.
+            </p>
+            <p class="welcome-text">
+                Get started by checking your planner or collaborating with your team members.
+                Need help? Our support team is always here to assist you.
+            </p>
+            <a href="#" class="welcome-button">Get Started →</a>
+            
+        </div>
+        <div class="statastics">
+            <div class="time-spent">
+                <h4>Time spent on average</h4>
+            </div>
+            <div class="tasks-completed">
+                <h4>Number of tasks completed this week<h4>
+            </div>
+            <div class="pending-works">
+                <h4>Pending works</h4>
+            </div>
+        </div>
     </main>
 </body>
 </html>
