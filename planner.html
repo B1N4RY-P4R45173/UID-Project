@@ -3,21 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Taskflow AI - Planner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./planner.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 </head>
 <body>
-    <p>Under Process!!!</p>
-    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FKolkata&showTitle=0&src=a29wcGFrYWFqYXkxMjNAZ21haWwuY29t&src=Y2xhc3Nyb29tMTA3Nzg1NDcwMjE3ODI1MDgwMjUwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%230047a8&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="logo-container">
+            <img src="./images/logo.png" alt="TaskFlow AI Logo" class="logo" style="border-radius: 35px;">
+        </div>
+        <div class="nav-menu">
+            <a href="./index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>HOME</span>
+            </a>
+            <a href=" " class="nav-item active">
+                <i class="fas fa-calendar-alt"></i>
+                <span>PLANNER</span>
+            </a>
+            <a href="./settings.html" class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>SETTINGS</span>
+            </a>
+            <a href="./teams.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>TEAMS</span>
+            </a>
+            <a href="./integrations.html" class="nav-item">
+                <i class="fas fa-puzzle-piece"></i>
+                <span>INTEGRATION</span>
+            </a>
+        </div>
+        <div class="user-profile">
+            <img src="./images/avatar.png" alt="User Avatar" class="avatar">
+            <div class="user-info">
+                <h4>John Doe</h4>
+                <p>Project Manager</p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="calendar-container">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FKolkata&showTitle=0&src=a29wcGFrYWFqYXkxMjNAZ21haWwuY29t&src=Y2xhc3Nyb29tMTA3Nzg1NDcwMjE3ODI1MDgwMjUwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%230047a8&color=%230B8043" class="calendar-iframe"></iframe>
+        </div>
+        <div class="wrapper">            
+            <div class="task-form">
+                <input type="text" id="task" placeholder="Enter task...">
+                <select id="priority">
+                    <option value="top">Top Priority</option>
+                    <option value="middle">Middle Priority</option>
+                    <option value="low">Less Priority</option>
+                </select>
+                <input type="date" id="deadline">
+                <button id="add-task">
+                    <i class="fas fa-plus"></i>
+                    Add Task
+                </button>
+            </div>
     
-    <div class="task-form">
-        <input type="text" id="task" placeholder="Enter task...">
-        <select id="priority">
-            <option value="top">Top Priority</option>
-            <option value="middle">Middle Priority</option>
-            <option value="low">Less Priority</option>
-        </select>
-        <input type="date" id="deadline">
-        <button id="add-task">Add Task</button>
+            <div class="upcoming-task">
+                <h3>Upcoming Tasks</h3>
+                <div class="task">
+                    <div class="task-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="task-details">
+                    <h4>Webinar</h4>
+                    <p>Attend the new marketing webinar</p>   
+                    </div>
+                    <span class="task-time">due in 1 day</span>
+                </div>
+    
+                <div class="task">
+                    <div class="task-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="task-details">
+                    <h4>Project report</h4>
+                    <p>Provide complete analytical report of Project CLI-DES</p>    
+                    </div>
+                    <span class="task-time">due in 2 days</span>
+                </div>
+    
+                <div class="task">
+                    <div class="task-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="task-details">
+                    <h4>Meeting with Boss</h4>
+                    <p> Metting with boss regarding yearly sales overview</p>    
+                    </div>   
+                    <span class="task-time" >due in 3 days</span>
+                </div>
+                            
+            </div>
+        </div>
     </div>
 </body>
 </html>
