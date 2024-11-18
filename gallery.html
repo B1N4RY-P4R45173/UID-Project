@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - TaskFlow AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background: rgba(26, 26, 46, 0.95);
+            padding: 1rem 2rem;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #00ff95;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00ff95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .gallery-section {
+            background: rgba(26, 26, 46, 0.95);
+            border-radius: 15px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            color: #00ff95;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 26, 46, 0.9);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-item h3 {
+            color: #00ff95;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-item p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .filter-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-button:hover, .filter-button.active {
+            background: #00ff95;
+            color: #1a1a2e;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .filter-buttons {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">TaskFlow AI</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="gallery-section">
+            <h1>Our Project Gallery</h1>
+            
+            <div class="filter-buttons">
+                <button class="filter-button active">All</button>
+                <button class="filter-button">Interface</button>
+                <button class="filter-button">Dashboard</button>
+                <button class="filter-button">Features</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./images/dashboard.png" alt="Dashboard Overview">
+                    <div class="overlay">
+                        <h3>Modern Dashboard</h3>
+                        <p>Our intuitive dashboard provides real-time project insights and analytics.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/Task management.png" alt="Task Management">
+                    <div class="overlay">
+                        <h3>Task Management</h3>
+                        <p>Efficient task organization with AI-powered prioritization.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src=" " alt="Team Collaboration">
+                    <div class="overlay">
+                        <h3>Team Collaboration</h3>
+                        <p>Enhanced team communication and project coordination tools.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/analytics.png" alt="Analytics Platform">
+                    <div class="overlay">
+                        <h3>Analytics Platform</h3>
+                        <p>Advanced analytics and reporting capabilities for better decision making.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/mobile-integration.png" alt="Mobile Interface">
+                    <div class="overlay">
+                        <h3>Mobile Interface</h3>
+                        <p>Seamless mobile experience for on-the-go project management.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/600/400" alt="AI Integration">
+                    <div class="overlay">
+                        <h3>AI Integration</h3>
+                        <p>Smart features powered by artificial intelligence algorithms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
