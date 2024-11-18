@@ -4,77 +4,119 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Settings Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="settings.css">
 </head>
 <body>
 
-  <div class="container">
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <div class="logo-container">
+      <img src="./images/logo.png" alt="TaskFlow AI Logo" class="logo" style="border-radius: 35px;">
+    </div>
+    <div class="nav-menu">
+      <a href="./index.html" class="nav-item">
+        <i class="fas fa-home"></i>
+        <span>HOME</span>
+      </a>
+      <a href="planner.html" class="nav-item">
+        <i class="fas fa-calendar-alt"></i>
+        <span>PLANNER</span>
+      </a>
+      <a href="./settings.html" class="nav-item active">
+        <i class="fas fa-cog"></i>
+        <span>SETTINGS</span>
+      </a>
+      <a href="teams.html" class="nav-item">
+        <i class="fas fa-users"></i>
+        <span>TEAMS</span>
+      </a>
+      <a href="integrations.html" class="nav-item">
+        <i class="fas fa-puzzle-piece"></i>
+        <span>INTEGRATIONS</span>
+      </a>
+    </div>
+    <div class="user-profile">
+      <img src="./images/avatar.png" alt="User Avatar" class="avatar">
+      <div class="user-info">
+        <h4>John Doe</h4>
+        <p>Project Manager</p>
+      </div>
+    </div>
+  </nav>
 
-    <aside class="sidebar">
-      <h2>General Settings</h2>
-      <nav>
-        <ul>
-          <li><a href="#your-account">Your Account</a></li>
-          <li><a href="#contact-info">Contact Info</a></li>
-          <li><a href="#password">Password</a></li>
-          <li><a href="#billing-method">Billing Method</a></li>
-        </ul>
-      </nav>
-    </aside>
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="settings-container">
+        <!-- Account Settings -->
+        <section id="account-settings" class="section">
+            <h2>Account Settings</h2>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="enter your username" value="">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="enter your email">
+            </div>
+            <div class="toggle-group">
+                <span>Two-Factor Authentication</span>
+                <label class="toggle-switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </section>
 
-    <main class="main-content">
-      
-      <section id="your-account" class="section">
-        <h2>Your Account</h2>
-        <form>
-          <div class="form-group">
-            <label for="user-id">User ID</label>
-            <input type="text" id="user-id">
-          </div>
-          <div class="form-group">
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name">
-          </div>
-          <div class="form-group">
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email">
-          </div>
-          <p class="delete-info">
-            Deleting your account will remove all your content, data, and information. <br>
-            <a href="#" class="delete-link">I want to delete my account</a>
-          </p>
-        </form>
-      </section>
+        <!-- Notification Preferences -->
+        <section id="notification-settings" class="section">
+            <h2>Notification Preferences</h2>
+            <div class="toggle-group">
+                <span>Email Notifications</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="toggle-group">
+                <span>Desktop Alerts</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="toggle-group">
+                <span>SMS Notifications</span>
+                <label class="toggle-switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </section>
 
-      <section id="contact-info" class="section">
-        <h2>Contact Info</h2>
-        <form>
-          <div class="form-group">
-            <label for="address">Address</label>
-            <input type="text" id="address">
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="text" id="phone">
-          </div>
-        </form>
-      </section>
+        <!-- Privacy & Security -->
+        <section id="privacy-settings" class="section">
+            <h2>Privacy & Security</h2>
+            <div class="form-group">
+                <label>Account Visibility</label>
+                <select class="form-control">
+                    <option>Private</option>
+                    <option>Team Visible</option>
+                    <option>Public</option>
+                </select>
+            </div>
+            <p class="delete-info">
+                Deleting your account will permanently remove all your data. 
+                <a href="#" class="delete-link">Delete Account</a>
+            </p>
+        </section>
 
-      <section id="billing-method" class="section">
-        <h2>Billing Method</h2>
-        <form>
-          <div class="form-group">
-            <label for="card">Credit Card</label>
-            <input type="text" id="card" placeholder="Enter card number">
-          </div>
-        </form>
-      </section>
-    </main>
-  </div>
-
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="btn btn-secondary">Cancel</button>
+            <button class="btn btn-primary">Save Changes</button>
+        </div>
+    </div>
+</main>
 </body>
 </html>
