@@ -260,34 +260,6 @@ body {
     white-space: nowrap;
 }
 
-@media (max-width: 1024px) {
-    .sidebar {
-        width: 80px;
-    }
-
-    .logo-container {
-        padding: 10px;
-    }
-
-    .logo-text {
-        display: none;
-    }
-
-    .nav-item span,
-    .user-info {
-        display: none;
-    }
-
-    .main-content {
-        margin-left: 80px;
-    }
-
-    .user-profile {
-        padding: 10px;
-        margin: 10px 5px;
-        justify-content: center;
-    }
-}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
