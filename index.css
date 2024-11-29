@@ -334,7 +334,7 @@ body {
 }
 
 .stat-trend {
-    display: inline-flex;
+    display: inline;
     align-items: center;
     gap: 5px;
     padding: 8px 12px;
@@ -512,22 +512,7 @@ body {
     font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
-    .footer {
-        padding: 40px 20px 20px;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .social-links {
-        justify-content: center;
-    }
-}
-
-/* Responsive Design */
+/* Screen size adjustmnet for smaller devices */
 @media (max-width: 1024px) {
     .sidebar {
         width: 80px;
@@ -585,5 +570,18 @@ body {
 
     .welcome-text {
         font-size: 1rem;
+    }
+    .footer {
+        padding: 40px 20px 20px;
+        
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .social-links {
+        justify-content: center;
     }
 }
