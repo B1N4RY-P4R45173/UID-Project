@@ -1,1 +1,115 @@
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
 
+/* Sidebar styles */
+.sidebar {
+    min-width: 200px;
+    max-width: 250px;
+    height: 100vh;
+    background-color: #121212;
+    color: white;
+    position: fixed;
+}
+
+.sidebar .nav-link {
+    color: #cfcfcf;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+    background-color: #16213e;
+    color: #00ff95 !important;
+    transform: translateX(5px);
+}
+
+.sidebar img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+}
+
+/* User profile section in the sidebar */
+.sidebar .mt-auto {
+    background-color: #343a40;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .mt-auto img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Main content background */
+.bg-gradient {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    min-height: 100vh;
+    margin-left: 250px; /* Matches sidebar width */
+    padding: 20px;
+}
+
+/* Cards section */
+.card {
+    background-color: #222;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #00ff95;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #d4d4d4;
+}
+
+/* Button styles */
+.btn-success {
+    background-color: #00ff95;
+    border: none;
+    color: #121212;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #00d884;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        height: auto;
+        width: 100%;
+    }
+
+    .bg-gradient {
+        margin-left: 0;
+    }
+}
