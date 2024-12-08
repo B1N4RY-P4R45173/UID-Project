@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - TaskFlow AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+        .navbar {
+            background: rgba(26, 26, 46, 0.95);
+        }
+        .logo {
+            color: #00ff95 !important;
+            font-weight: bold;
+        }
+        .nav-link {
+            color: #fff !important;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #00ff95 !important;
+        }
+        .gallery-section {
+            background: rgba(26, 26, 46, 0.95);
+            border-radius: 15px;
+            padding: 3rem;
+        }
+        h1 {
+            color: #00ff95;
+            text-align: center;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            width: 100%;
+            height: 300px; /* Adjust as needed */
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 80%;
+            object-fit: cover; /* Ensures the image fills the dimensions */
+            border-radius: 10px;
+        }
+        .gallery-item:hover {
+            transform: scale(1.1);
+        }
+        .gallery-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 26, 46, 0.9);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            padding: 1rem;
+            color: #fff;
+        }
+        .gallery-item:hover .overlay {
+            transform: translateY(0);
+        }
+        .filter-button {
+            border: none;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            transition: background 0.3s ease;
+        }
+        .filter-button:hover,
+        .filter-button.active {
+            background: #00ff95;
+            color: #1a1a2e;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a href="index.html" class="navbar-brand logo">TaskFlow AI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="gallery-section">
+            <h1>Our Project Gallery</h1>
+            <div class="d-flex justify-content-center my-4 gap-2">
+                <button class="filter-button active">All</button>
+                <button class="filter-button">Interface</button>
+                <button class="filter-button">Dashboard</button>
+                <button class="filter-button">Features</button>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="dashboard.png" alt="Dashboard Overview">
+                        <div class="overlay">
+                            <h3>Modern Dashboard</h3>
+                            <p>Our intuitive dashboard provides real-time project insights and analytics.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="Task management.png" alt="Task Management">
+                        <div class="overlay">
+                            <h3>Task Management</h3>
+                            <p>Efficient task organization with AI-powered prioritization.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="analytics.png" alt="Analytics Platform">
+                        <div class="overlay">
+                            <h3>Analytics Platform</h3>
+                            <p>Advanced analytics and reporting capabilities for better decision making.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="mobile-integration.png" alt="Mobile Interface">
+                        <div class="overlay">
+                            <h3>Mobile Interface</h3>
+                            <p>Seamless mobile experience for on-the-go project management.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="/api/placeholder/600/400" alt="AI Integration">
+                        <div class="overlay">
+                            <h3>AI Integration</h3>
+                            <p>Smart features powered by artificial intelligence algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="/api/placeholder/600/400" alt="Team Collaboration">
+                        <div class="overlay">
+                            <h3>Team Collaboration</h3>
+                            <p>Enhanced team communication and project coordination tools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
