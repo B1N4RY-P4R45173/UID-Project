@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -24,32 +25,26 @@ body {
 
 .logo-container {
     padding: 20px;
-    text-align: center;
 }
 
 .logo {
     width: 120px;
     height: auto;
+    border-radius: 25%;
 }
 
 .nav-menu {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 0 15px;
-    flex: 1;
+    flex-grow: 1;
 }
 
 .nav-item {
-    width: 100%;
+    display: flex;
+    align-items: center;
     padding: 12px 20px;
     color: #e6e6e6;
     text-decoration: none;
     font-size: 1.1rem;
     border-radius: 8px;
-    display: flex;
-    align-items: center;
     gap: 12px;
     transition: all 0.3s ease;
 }
@@ -59,12 +54,20 @@ body {
     text-align: center;
 }
 
-.nav-item:hover, .nav-item.active {
-    background-color: #16213e;
-    color: #00ff95;
+.nav-item:hover {
+    color: #00ff95; /* Text turns green */
+    background-color: transparent; /* No background change */
+    text-decoration: none;
     transform: translateX(5px);
 }
 
+.nav-item.active {
+    background-color: #16213e;
+    color: #00ff95; /* Text stays green for active menu */
+    font-weight: bold;
+}
+
+/* User Profile */
 .user-profile {
     padding: 15px;
     margin: 15px;
@@ -73,6 +76,7 @@ body {
     gap: 10px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
+    margin-top: auto; /* Align at the bottom of the sidebar */
 }
 
 .avatar {
@@ -92,6 +96,7 @@ body {
     color: #00ff95;
     font-size: 0.8rem;
 }
+
 /* Main Content */
 .main-content {
     margin-left: 240px;
@@ -99,9 +104,9 @@ body {
     background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     min-height: 100vh;
     padding: 30px;
-    transition: margin-left 0.3s ease;
 }
 
+/* Section */
 .section {
     background-color: #16213e;
     padding: 20px;
@@ -110,7 +115,6 @@ body {
 }
 
 .section h2 {
-    margin-top: 0;
     color: #00ff95;
 }
 
@@ -134,7 +138,7 @@ body {
 .integration-box h3 {
     font-size: 1.5rem;
     margin: 10px 0;
-    color: #00ff95;
+    color: #00ff95; /* Green for headings */
 }
 
 .integration-box p {
@@ -155,7 +159,8 @@ body {
 }
 
 .integration-box button:hover {
-    background-color: #00ff95;
+    background-color: #00b4d8; /* Change on hover */
+    color: #1a1a2e; /* Ensure text remains readable */
 }
 
 .integration-box:hover {
