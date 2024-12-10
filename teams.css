@@ -9,8 +9,10 @@ body {
     min-height: 100vh;
     display: flex;
     background: #f5f5f5;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
 }
 
+/* Sidebar Styles */
 .sidebar {
     width: 240px;
     height: 100vh;
@@ -29,7 +31,6 @@ body {
 .logo {
     width: 120px;
     height: auto;
-    border-radius: 35px;
 }
 
 .nav-menu {
@@ -93,6 +94,7 @@ body {
     font-size: 0.8rem;
 }
 
+/* Main Content */
 .main-content {
     flex: 1;
     margin-left: 240px;
@@ -113,6 +115,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Integration Boxes Layout */
 .integration-grid {
     display: flex;
     flex-wrap: wrap;
@@ -173,4 +176,21 @@ body {
 .integration-box button:hover {
     background-color: #00b4d8;
     transform: scale(1.05);
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 768px) {
+    .integration-box {
+        flex: 1 1 calc(100% - 10px);
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
 }
