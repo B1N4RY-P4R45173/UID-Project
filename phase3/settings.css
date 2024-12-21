@@ -1,0 +1,190 @@
+/* Custom CSS for the Settings Page */
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background-color: #232f3e; /* Same as earlier */
+  color: #ffffff;
+  padding: 20px;
+}
+
+.sidebar .nav-item {
+  display: flex;
+  align-items: center;
+  color: #d1d5db; /* Muted text color for links */
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-item:hover, .sidebar .nav-item.active {
+  color: #ffffff;
+  background-color: #374151; /* Darker shade for hover/active */
+}
+
+.sidebar .nav-item i {
+  margin-right: 10px;
+}
+
+.sidebar .logo-container img {
+  max-width: 100%;
+  border-radius: 35px;
+}
+
+.sidebar .user-profile {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #374151; /* Match sidebar hover color */
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .user-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.sidebar .user-info h4 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.sidebar .user-info p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #9ca3af; /* Muted color for text */
+}
+
+/* Main Content Styles */
+.main-content {
+  margin-left: 270px;
+  padding: 20px;
+}
+
+.settings-container {
+  background-color: #1f2937; /* Dark container background */
+  color: #f9fafb; /* Light text for contrast */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.settings-container h2 {
+  border-bottom: 2px solid #22d3ee; /* Cyan border */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #22d3ee; /* Cyan heading */
+}
+
+.form-label {
+  color: #d1d5db; /* Muted label color */
+}
+
+.form-control, .form-select {
+  background-color: #374151; /* Match sidebar hover color */
+  color: #ffffff;
+  border: 1px solid #4b5563; /* Border color matching the theme */
+}
+
+.form-control:focus, .form-select:focus {
+  box-shadow: none;
+  border-color: #22d3ee; /* Cyan focus border */
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #6b7280; /* Muted toggle background */
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.toggle-switch input:checked + .slider {
+  background-color: #22d3ee; /* Cyan when active */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.delete-link {
+  color: #ef4444; /* Red for delete link */
+  text-decoration: none;
+}
+
+.delete-link:hover {
+  text-decoration: underline;
+}
+
+/* Action Buttons */
+.action-buttons .btn {
+  min-width: 100px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-secondary {
+  background-color: #6b7280; /* Muted gray */
+  border: none;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: #4b5563; /* Darker gray */
+}
+
+.btn-primary {
+  background-color: #22d3ee; /* Cyan button */
+  border: none;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #0ea5e9; /* Darker cyan */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
