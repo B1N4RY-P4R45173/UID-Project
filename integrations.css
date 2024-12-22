@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -92,6 +93,7 @@ body {
     color: #00ff95;
     font-size: 0.8rem;
 }
+
 /* Main Content */
 .main-content {
     margin-left: 240px;
@@ -99,30 +101,36 @@ body {
     background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     min-height: 100vh;
     padding: 30px;
-    transition: margin-left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add spacing between sections */
 }
 
+/* Section */
 .section {
     background-color: #16213e;
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
 }
 
 .section h2 {
-    margin-top: 0;
-    color: #00ff95;
+    color: white; /* Updated to white */
+}
+
+.section p {
+    color: white; /* Updated to white */
 }
 
 /* Integration Box Styles */
 .integration-box {
     background-color: #1a1a2e;
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: transform 0.3s ease;
+    width: 100%; /* Full width */
+    margin: 0 0 20px 0; /* Spacing between boxes */
 }
 
 .integration-box i {
@@ -134,7 +142,7 @@ body {
 .integration-box h3 {
     font-size: 1.5rem;
     margin: 10px 0;
-    color: #00ff95;
+    color: #00ff95; /* Green for headings */
 }
 
 .integration-box p {
@@ -155,7 +163,8 @@ body {
 }
 
 .integration-box button:hover {
-    background-color: #00ff95;
+    background-color: #00b4d8; /* Change on hover */
+    color: #1a1a2e; /* Ensure text remains readable */
 }
 
 .integration-box:hover {
