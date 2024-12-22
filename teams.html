@@ -6,34 +6,40 @@
     <title>Taskflow AI - Teams</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="teams.css">
 </head>
-<body class="d-flex">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskflow AI - Teams</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
     <!-- Sidebar Navigation -->
     <nav class="sidebar">
         <div class="logo-container">
             <a href="./index.html"><img src="./images/logo.png" alt="TaskFlow AI Logo" class="logo" style="border-radius: 35px;"></a>
         </div>
         <div class="nav-menu">
-            <a href=" " class="nav-item active">
+            <a href="./index.html" class="nav-item">
                 <i class="fas fa-home"></i>
                 <span>HOME</span>
             </a>
-            <a href="planner.html" class="nav-item">
+            <a href="./planner.html" class="nav-item">
                 <i class="fas fa-calendar-alt"></i>
                 <span>PLANNER</span>
             </a>
-            <a href="settings.html" class="nav-item">
+            <a href="./settings.html" class="nav-item">
                 <i class="fas fa-cog"></i>
                 <span>SETTINGS</span>
             </a>
-            <a href="teams.html" class="nav-item">
+            <a href="#" class="nav-item active">
                 <i class="fas fa-users"></i>
                 <span>TEAMS</span>
             </a>
-            <a href="integrations.html" class="nav-item">
+            <a href="./integrations.html" class="nav-item">
                 <i class="fas fa-puzzle-piece"></i>
                 <span>INTEGRATION</span>
             </a>
@@ -46,63 +52,50 @@
             </div>
         </div>
     </nav>
+
     <!-- Main Content -->
-    <div class="main-content flex-grow-1 ms-240 bg-gradient text-white" style="min-height: 100vh; padding: 30px;">
-        <div class="section bg-dark p-4 rounded">
+    <main class="main-content">
+        <section class="section">
             <h2>Teams Management</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <div class="col">
-                    <div class="integration-box bg-dark p-4 rounded text-center shadow-sm">
-                        <i class="fas fa-user-plus fs-1 text-info mb-3"></i>
-                        <h3 class="text-success">Add Members</h3>
-                        <p>Invite and onboard new team members quickly and easily.</p>
-                        <button class="btn btn-success">Add Members</button>
-                    </div>
+            <div class="integration-grid">
+                <div class="integration-box">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Add Members</h3>
+                    <p>Invite and onboard new team members quickly and easily.</p>
+                    <button>Add Members</button>
                 </div>
-                <div class="col">
-                    <div class="integration-box bg-dark p-4 rounded text-center shadow-sm">
-                        <i class="fas fa-users-cog fs-1 text-info mb-3"></i>
-                        <h3 class="text-success">Manage Teams</h3>
-                        <p>Update team details, roles, and collaborative settings with precision.</p>
-                        <button class="btn btn-success">Team Settings</button>
-                    </div>
+                <div class="integration-box">
+                    <i class="fas fa-users-cog"></i>
+                    <h3>Manage Teams</h3>
+                    <p>Update team details, roles, and collaborative settings with precision.</p>
+                    <button>Team Settings</button>
                 </div>
-                <div class="col">
-                    <div class="integration-box bg-dark p-4 rounded text-center shadow-sm">
-                        <i class="fas fa-key fs-1 text-info mb-3"></i>
-                        <h3 class="text-success">Access Control</h3>
-                        <p>Define and manage granular permissions for team members.</p>
-                        <button class="btn btn-success">Control Permissions</button>
-                    </div>
+                <div class="integration-box">
+                    <i class="fas fa-key"></i>
+                    <h3>Access Control</h3>
+                    <p>Define and manage granular permissions for team members.</p>
+                    <button>Control Permissions</button>
                 </div>
-                <div class="col">
-                    <div class="integration-box bg-dark p-4 rounded text-center shadow-sm">
-                        <i class="fas fa-user-friends fs-1 text-info mb-3"></i>
-                        <h3 class="text-success">Create Teams</h3>
-                        <p>Establish new project teams and define their initial structure.</p>
-                        <button class="btn btn-success">Create Team</button>
-                    </div>
+                <div class="integration-box">
+                    <i class="fas fa-user-friends"></i>
+                    <h3>Create Teams</h3>
+                    <p>Establish new project teams and define their initial structure.</p>
+                    <button>Create Team</button>
                 </div>
-                <div class="col">
-                    <div class="integration-box bg-dark p-4 rounded text-center shadow-sm">
-                        <i class="fas fa-chart-line fs-1 text-info mb-3"></i>
-                        <h3 class="text-success">Team Performance</h3>
-                        <p>Track and analyze team productivity and collaboration metrics.</p>
-                        <button class="btn btn-success">View Analytics</button>
-                    </div>
+                <div class="integration-box">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Team Performance</h3>
+                    <p>Track and analyze team productivity and collaboration metrics.</p>
+                    <button>View Analytics</button>
                 </div>
-                <div class="col">
-                    <div class="integration-box bg-dark p-4 rounded text-center shadow-sm">
-                        <i class="fas fa-layer-group fs-1 text-info mb-3"></i>
-                        <h3 class="text-success">Team Hierarchy</h3>
-                        <p>Visualize and manage organizational team structures.</p>
-                        <button class="btn btn-success">View Hierarchy</button>
-                    </div>
+                <div class="integration-box">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Team Hierarchy</h3>
+                    <p>Visualize and manage organizational team structures.</p>
+                    <button>View Hierarchy</button>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        </section>
+    </main>
 </body>
 </html>
