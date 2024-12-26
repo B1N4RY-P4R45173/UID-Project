@@ -10,117 +10,56 @@
     <link rel="stylesheet" href="teams.css">
 </head>
 <body class="d-flex">
-    <!-- Sidebar -->
-    <nav class="sidebar bg-dark text-light p-3 vh-100 d-flex flex-column align-items-start shadow">
-        <div class="text-center mb-4">
-            <a href="./index.html">
-                <img src="./images/logo.png" alt="TaskFlow AI Logo" class="rounded-circle" style="width: 120px;">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="logo-container">
+            <a href="./index.html"><img src="./images/logo.png" alt="TaskFlow AI Logo" class="logo" style="border-radius: 35px;"></a>
+        </div>
+        <div class="nav-menu">
+            <a href=" " class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>HOME</span>
+            </a>
+            <a href="planner.html" class="nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>PLANNER</span>
+            </a>
+            <a href="settings.html" class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>SETTINGS</span>
+            </a>
+            <a href="teams.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>TEAMS</span>
+            </a>
+            <a href="integrations.html" class="nav-item">
+                <i class="fas fa-puzzle-piece"></i>
+                <span>INTEGRATION</span>
             </a>
         </div>
-        <ul class="nav flex-column w-100">
-            <li class="nav-item mb-2">
-                <a class="nav-link text-light d-flex align-items-center" href="./index.html">
-                    <i class="fas fa-home me-2"></i> HOME
-                </a>
-            </li>
-            <li class="nav-item mb-2">
-                <a class="nav-link text-light d-flex align-items-center" href="./planner.html">
-                    <i class="fas fa-calendar-alt me-2"></i> PLANNER
-                </a>
-            </li>
-            <li class="nav-item mb-2">
-                <a class="nav-link text-light d-flex align-items-center" href="./settings.html">
-                    <i class="fas fa-cog me-2"></i> SETTINGS
-                </a>
-            </li>
-            <li class="nav-item mb-2">
-                <a class="nav-link text-light d-flex align-items-center active bg-secondary rounded" href="#">
-                    <i class="fas fa-users me-2"></i> TEAMS
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light d-flex align-items-center" href="./integrations.html">
-                    <i class="fas fa-puzzle-piece me-2"></i> INTEGRATION
-                </a>
-            </li>
-        </ul>
-        <div class="mt-auto d-flex align-items-center p-3 bg-secondary rounded">
-            <img src="./images/avatar.png" alt="User Avatar" class="rounded-circle me-3" style="width: 40px;">
-            <div>
-                <h6 class="m-0">John Doe</h6>
-                <small class="text-light">Project Manager</small>
+        <div class="user-profile">
+            <img src="./images/avatar.png" alt="User Avatar" class="avatar">
+            <div class="user-info">
+                <h4>Ajay Koppaka</h4>
+                <p>Project Manager</p>
             </div>
         </div>
     </nav>
-
     <!-- Main Content -->
-    <main class="flex-grow-1 p-4 bg-gradient" style="background: linear-gradient(135deg, #2c3e50, #3498db);">
+    <main class="flex-grow-1 p-4 bg-gradient">
         <div class="container bg-dark text-light p-4 rounded shadow">
             <h2 class="text-center text-success mb-4">Teams Management</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card bg-dark border-light text-center shadow h-100">
-                        <div class="card-body">
-                            <i class="fas fa-user-plus text-primary fs-1 mb-3"></i>
-                            <h5 class="card-title text-success">Add Members</h5>
-                            <p class="card-text">Invite and onboard new team members quickly and easily.</p>
-                            <button class="btn btn-success">Add Members</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-dark border-light text-center shadow h-100">
-                        <div class="card-body">
-                            <i class="fas fa-users-cog text-primary fs-1 mb-3"></i>
-                            <h5 class="card-title text-success">Manage Teams</h5>
-                            <p class="card-text">Update team details, roles, and collaborative settings with precision.</p>
-                            <button class="btn btn-success">Team Settings</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-dark border-light text-center shadow h-100">
-                        <div class="card-body">
-                            <i class="fas fa-key text-primary fs-1 mb-3"></i>
-                            <h5 class="card-title text-success">Access Control</h5>
-                            <p class="card-text">Define and manage granular permissions for team members.</p>
-                            <button class="btn btn-success">Control Permissions</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-dark border-light text-center shadow h-100">
-                        <div class="card-body">
-                            <i class="fas fa-user-friends text-primary fs-1 mb-3"></i>
-                            <h5 class="card-title text-success">Create Teams</h5>
-                            <p class="card-text">Establish new project teams and define their initial structure.</p>
-                            <button class="btn btn-success">Create Team</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-dark border-light text-center shadow h-100">
-                        <div class="card-body">
-                            <i class="fas fa-chart-line text-primary fs-1 mb-3"></i>
-                            <h5 class="card-title text-success">Team Performance</h5>
-                            <p class="card-text">Track and analyze team productivity and collaboration metrics.</p>
-                            <button class="btn btn-success">View Analytics</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-dark border-light text-center shadow h-100">
-                        <div class="card-body">
-                            <i class="fas fa-layer-group text-primary fs-1 mb-3"></i>
-                            <h5 class="card-title text-success">Team Hierarchy</h5>
-                            <p class="card-text">Visualize and manage organizational team structures.</p>
-                            <button class="btn btn-success">View Hierarchy</button>
-                        </div>
-                    </div>
-                </div>
+            <!-- Add Member Form -->
+            <div class="mb-4">
+                <input type="text" id="member-name" class="form-control mb-2" placeholder="Enter Member Name">
+                <input type="text" id="member-role" class="form-control mb-2" placeholder="Enter Member Role">
+                <button id="add-member-btn" class="btn btn-success">Add Member</button>
             </div>
+            <!-- Team List -->
+            <div id="team-list" class="row g-3"></div>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="teams.js"></script>
 </body>
 </html>
