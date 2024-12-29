@@ -16,31 +16,31 @@
             <a href="./index.html"><img src="./images/logo.png" alt="TaskFlow AI Logo" class="logo" style="border-radius: 35px;"></a>
         </div>
         <div class="nav-menu">
-            <a href=" " class="nav-item active">
+            <a href="./index.html" class="nav-item">
                 <i class="fas fa-home"></i>
                 <span>HOME</span>
             </a>
-            <a href="planner.html" class="nav-item">
+            <a href="./planner.html" class="nav-item">
                 <i class="fas fa-calendar-alt"></i>
                 <span>PLANNER</span>
             </a>
-            <a href="settings.html" class="nav-item">
+            <a href="./settings.html" class="nav-item">
                 <i class="fas fa-cog"></i>
                 <span>SETTINGS</span>
             </a>
-            <a href="teams.html" class="nav-item">
+            <a href="#" class="nav-item active">
                 <i class="fas fa-users"></i>
                 <span>TEAMS</span>
             </a>
-            <a href="integrations.html" class="nav-item">
+            <a href="./integrations.html" class="nav-item">
                 <i class="fas fa-puzzle-piece"></i>
                 <span>INTEGRATION</span>
             </a>
         </div>
         <div class="user-profile">
-            <img src="./images/avatar.png" alt="User Avatar" class="avatar">
+            <img src="./images/avatar.png" alt="User  Avatar" class="avatar">
             <div class="user-info">
-                <h4>Ajay Koppaka</h4>
+                <h4>John Doe</h4>
                 <p>Project Manager</p>
             </div>
         </div>
@@ -48,18 +48,154 @@
     <!-- Main Content -->
     <main class="flex-grow-1 p-4 bg-gradient">
         <div class="container bg-dark text-light p-4 rounded shadow">
-            <h2 class="text-center text-success mb-4">Teams Management</h2>
-            <!-- Add Member Form -->
-            <div class="mb-4">
-                <input type="text" id="member-name" class="form-control mb-2" placeholder="Enter Member Name">
-                <input type="text" id="member-role" class="form-control mb-2" placeholder="Enter Member Role">
-                <button id="add-member-btn" class="btn btn-success">Add Member</button>
-            </div>
-            <!-- Team List -->
+            <h2 class="text-center text-success mb-4"><b>Teams Management</b></h2>
             <div id="team-list" class="row g-3"></div>
+
+            <div class="mt-4">
+                <!-- Add Member Form -->
+                <div class="bg-dark text-light p-4 rounded shadow mb-4">
+                    <i class="fas fa-key" style="color: blue;"></i>
+                    <h3 class="text-light mb-3">Add Member</h3>
+                    <input type="text" id="memberName" class="form-control mb-2" placeholder="Enter Name">
+                    <input type="text" id="memberEmail" class="form-control mb-2" placeholder="Enter e-mail">
+                    <button class="btn btn-success" onclick="addMember()">Add Member</button>
+                </div>
+                <!-- Access Control Box -->
+                <div class="bg-dark text-light p-4 rounded shadow mb-4">
+                    <i class="fas fa-key" style="color: blue;"></i>
+                    <h3 class="text-light mb-3">Access Control</h3>
+                    <input type="text" id="role" class="form-control mb-2" placeholder="Enter Role">
+                    <button class="btn btn-warning" onclick="setAccess()">Set Access</button>
+                </div>
+
+                <!-- Create Box -->
+                <div class="bg-dark text-light p-4 rounded shadow mb-4">
+                    <i class="fas fa-user-friends" style="color: blue;"></i>
+                    <h3 class="text-light mb-3">Create Teams</h3>
+                    <input type="text" id="teamName" class="form-control mb-2" placeholder="Enter Team Name">
+                    <button class="btn btn-info" onclick="createTeam()">Create Team</button>
+                </div>
+            </div>
         </div>
     </main>
+
+    <!-- Modals -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalLabel">Error</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Please fill in all required fields.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addMemberModal" tabindex="-1" aria-labelledby="addMemberModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addMemberModalLabel">Add Member</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Member added successfully!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="setAccessModal" tabindex="-1" aria-labelledby="setAccessModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="setAccessModalLabel">Set Access</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Access set successfully!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="createTeamModal" tabindex="-1" aria-labelledby="createTeamModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createTeamModalLabel">Create Team</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Team created successfully!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="teams.js"></script>
+    <script>
+        function addMember() {
+            const name = document.getElementById('memberName').value;
+            const email = document.getElementById('memberEmail').value;
+
+            if (!name || !email) {
+                const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                errorModal.show();
+            } else {
+                // Logic to add member can be added here
+                const addMemberModal = new bootstrap.Modal(document.getElementById('addMemberModal'));
+                addMemberModal.show();
+                // Clear input fields
+                document.getElementById('memberName').value = '';
+                document.getElementById('memberEmail').value = '';
+            }
+        }
+
+        function setAccess() {
+            const role = document.getElementById('role').value;
+
+            if (!role) {
+                const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                errorModal.show();
+            } else {
+                // Logic to set access can be added here
+                const setAccessModal = new bootstrap.Modal(document.getElementById('setAccessModal'));
+                setAccessModal.show();
+                // Clear input field
+                document.getElementById('role').value = '';
+            }
+        }
+
+        function createTeam() {
+            const teamName = document.getElementById('teamName').value;
+
+            if (!teamName) {
+                const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                errorModal.show();
+            } else {
+                // Logic to create team can be added here
+                const createTeamModal = new bootstrap.Modal(document.getElementById('createTeamModal'));
+                createTeamModal.show();
+                // Clear input field
+                document.getElementById('teamName').value = '';
+            }
+        }
+    </script>
 </body>
 </html>
