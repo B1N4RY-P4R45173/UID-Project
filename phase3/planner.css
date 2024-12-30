@@ -61,11 +61,13 @@ body {
     text-align: center;
 }
 
-.nav-item:hover, .nav-item.active {
+.nav-item:hover, 
+.nav-item.active {
     background-color: #16213e;
     color: #00ff95;
     transform: translateX(5px);
 }
+
 .user-profile {
     padding: 15px;
     margin: 15px;
@@ -108,14 +110,13 @@ body {
     row-gap: 20px;
 }
 
+/* Calendar Styles */
 .calendar-container {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 25px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    /* width: 550px; */
-    
 }
 
 .calendar-iframe {
@@ -125,50 +126,90 @@ body {
     width: 600px;
 }
 
+/* Wrapper Styles */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+}
+
+/* Task Form Styles */
 .task-form {
     display: flex;
     flex-direction: column;
     width: 500px;
     background: rgba(255, 255, 255, 0.1);
-    padding: 25px;
+    padding: 30px;  /* Increased padding */
     border-radius: 20px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    /* position: absolute;
-    left: 850px;
-    top: 30px */
-    height: 300px;
+    height: auto;  /* Changed from fixed height */
+    gap: 15px;    /* Added gap between elements */
 }
 
 .task-form input[type="text"],
+.task-form textarea,
 .task-form select,
 .task-form input[type="date"] {
     width: 100%;    
-    padding: 12px;
-    margin-bottom: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
+    padding: 15px;  /* Increased padding */
+    margin-bottom: 0; /* Removed margin, using gap instead */
+    background: rgba(255, 255, 255, 0.15); /* Slightly more visible */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;  /* Increased border radius */
     color: white;
     font-size: 1rem;
+    outline: none;
 }
 
-.task-form input::placeholder {
+.task-form textarea {
+    min-height: 120px;  /* Increased minimum height */
+    resize: vertical;
+}
+
+.task-form input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 15px;
+}
+
+.task-form input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.7;
+    position: absolute;
+    right: 45px;
+    cursor: pointer;
+}
+
+.task-form input::placeholder,
+.task-form textarea::placeholder {
     color: rgba(255, 255, 255, 0.6);
+}
+
+.task-form select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 45px;
 }
 
 .task-form select option {
     background: #2c3e50;
     color: white;
+    padding: 12px;
 }
 
 .task-form button {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     background: #00ff95;
     color: #1a1a2e;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -177,15 +218,15 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    margin-top: 5px;
 }
 
 .task-form button:hover {
     background: #00e085;
     transform: translateY(-2px);
 }
-
+/* Upcoming Tasks Styles */
 .upcoming-task {
-    display: flex;
     width: 500px;
     margin-top: 20px;
     display: flex;
@@ -259,7 +300,6 @@ body {
     border-radius: 20px;
     white-space: nowrap;
 }
-
 
 /* Responsive Design */
 @media (max-width: 1024px) {
