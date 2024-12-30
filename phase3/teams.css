@@ -23,6 +23,7 @@ body {
 .logo {
     width: 120px;
     height: auto;
+    border-radius: 35px;
 }
 
 .nav-menu {
@@ -50,9 +51,13 @@ body {
 .nav-item i {
     width: 20px;
     text-align: center;
+    color:white
+}
+.nav-item.active i {
+    color: #00ff95;
 }
 
-.nav-item:hover, .nav-item.active {
+.nav-item:hover, .nav-item.active{
     background-color: #16213e;
     color: #00ff95;
     transform: translateX(5px);
@@ -101,6 +106,36 @@ body {
     border-radius: 5px;
 }
 
+/* Box styles */
+.bg-dark {
+    background-color: #1a1a2e;
+}
+
+.text-light {
+    color: #e6e6e6;
+}
+
+.shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+/* Icons and Titles */
+i {
+    color: blue;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+h3 {
+    display: inline-block;
+    color: #e6e6e6;
+    margin-bottom: 10px;
+}
+
 /* Button styles */
 .btn-success {
     background-color: #00ff95;
@@ -111,27 +146,34 @@ body {
 }
 
 .btn-success:hover {
-    background-color: #00d884;
+    background-color: #00b4d8;
+    color: #121212;
 }
 
 .btn-warning {
-    background-color: #ffa500;
+    background-color: #00ff95;
     border: none;
-    color: white;
+    color: #121212;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .btn-warning:hover {
-    background-color: #e59400;
+    background-color: #00b4d8;
+    color:  #121212;
 }
 
-.btn-danger {
-    background-color: #ff4d4d;
+.btn-info {
+    background-color: #00ff95;
     border: none;
-    color: white;
+    color: #121212;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.btn-danger:hover {
-    background-color: #e04444;
+.btn-info:hover {
+    background-color: #00b4d8;
+    color:  #121212;
 }
 
 /* Responsive adjustments */

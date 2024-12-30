@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taskflow AI - Integrations</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="integrations.css">
 </head>
 
@@ -43,7 +40,7 @@
             </a>
         </div>
         <div class="user-profile">
-            <img src="./images/avatar.png" alt="User Avatar" class="avatar">
+            <img src="./images/avatar.png" alt="User  Avatar" class="avatar">
             <div class="user-info">
                 <h4>Ajay Koppaka</h4>
                 <p>Project Manager</p>
@@ -63,7 +60,7 @@
                             <i class="fab fa-google display-3 text-info mb-3"></i>
                             <h3 class="card-title text-success">Google Assistant</h3>
                             <p class="card-text">Manage tasks, set reminders, and streamline your workflow with Google Assistant integration.</p>
-                            <button class="btn btn-success">Connect</button>
+                            <button class="btn btn-success" onclick="connectGoogle()">Connect</button>
                         </div>
                     </div>
                 </div>
@@ -73,7 +70,7 @@
                             <i class="fas fa-microphone-alt display-3 text-info mb-3"></i>
                             <h3 class="card-title text-success">Siri</h3>
                             <p class="card-text">Seamlessly access voice commands on Apple devices and control your Taskflow AI tasks.</p>
-                            <button class="btn btn-success">Connect</button>
+                            <button class="btn btn-success" onclick="showUnderConstruction()">Connect</button>
                         </div>
                     </div>
                 </div>
@@ -83,7 +80,7 @@
                             <i class="fas fa-volume-up display-3 text-info mb-3"></i>
                             <h3 class="card-title text-success">Amazon Echo</h3>
                             <p class="card-text">Use Alexa voice commands to interact with Taskflow AI hands-free.</p>
-                            <button class="btn btn-success">Connect</button>
+                            <button class="btn btn-success" onclick="showUnderConstruction()">Connect</button>
                         </div>
                     </div>
                 </div>
@@ -93,7 +90,7 @@
                             <i class="fas fa-robot display-3 text-info mb-3"></i>
                             <h3 class="card-title text-success">Custom Voice AI</h3>
                             <p class="card-text">Add support for additional voice AI assistants to customize your productivity experience.</p>
-                            <button class="btn btn-success">Connect</button>
+                            <button class="btn btn-success" onclick="requestMicrophoneAccess()">Connect</button>
                         </div>
                     </div>
                 </div>
@@ -102,6 +99,24 @@
     </main>
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function connectGoogle() {
+            window.location.href = "https://www.google.com";
+        }
+
+        function requestMicrophoneAccess() {
+            if (confirm("This application needs access to your microphone. Do you allow it?")) {
+                // Logic to access microphone can be added here
+                alert("Microphone access granted.");
+            } else {
+                alert("Microphone access denied.");
+            }
+        }
+
+        function showUnderConstruction() {
+            alert("This feature is still under construction.");
+        }
+    </script>
 </body>
 
 </html>

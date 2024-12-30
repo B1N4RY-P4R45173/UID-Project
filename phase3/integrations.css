@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #2c3e50, #3498db);
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
 }
 
 /* Sidebar Styles */
@@ -92,6 +92,7 @@ body {
     font-size: 0.8rem;
 }
 
+
 /* Main Content */
 .main-content {
     margin-left: 240px;
@@ -162,4 +163,5 @@ body {
 
 .card button:hover {
     background-color: #00b4d8;
+    color: #1a1a2e;
 }
